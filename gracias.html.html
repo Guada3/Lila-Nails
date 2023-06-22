@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agradecimiento</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Estilos adicionales específicos de esta página */
+    /* Estilo tecnológico y femenino */
+    body {
+      background-color: #f6f6f6;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+
+    header {
+      border-bottom: 2px solid #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ff4d88;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e63f7b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Agradecimiento</h1>
+  </header>
+
+  <div class="container">
+    <p>¡Gracias por contactarnos!</p>
+    <p>Tu mensaje ha sido enviado correctamente.</p>
+    <button onclick="window.location.href='index.html'">Volver al inicio</button>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var animatedElements = document.querySelectorAll('.fade-in');
+      
+      for (var i = 0; i < animatedElements.length; i++) {
+        var element = animatedElements[i];
+        
+        if (isElementInViewport(element)) {
+          element.classList.add('animate');
+        }
+      }
+    });
+
+    function isElementInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  </script>
+</body>
+</html>
